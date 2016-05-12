@@ -21,6 +21,9 @@ var gulpIf      = require('gulp-if');
 var cssnano     = require('gulp-cssnano');
 var del         = require('del');
 var runSequence = require('run-sequence');
+var prompt      = require('gulp-prompt');
+var exec        = require('child_process').exec;
+
 
 var dependencies = [
   'react',
@@ -83,6 +86,27 @@ gulp.task('watch', ["browserSync", "sass", "scripts"], function () {
   gulp.watch("app/styles/**/*.scss", ["sass"]);
   gulp.watch("app/*.html", browserSync.reload);
 });
+
+gulp.task('deploy', function() {
+
+  gulp.src('/')
+    .pipe(prompt.prompt({
+        type: 'confirm',
+        name: 'task',
+        message: 'This will deploy to GitHub Pages. Have you already built your application and pushed your updated master branch?'
+    }, function(res){
+      if (res.task){
+        console.log('Attempting: "git subtree push --prefix dist origin gh-pages"');
+        exec('git subtree push --prefix dist origin gh-pages', function(err, stdout, stderr) {
+            console.log(stdout);
+            console.log(stderr);
+        });
+      } else { console.log('Please do this first and then run `gulp deploy` again.'); }
+    }));
+
+});
+
+
 
 gulp.task('default', ['scripts','watch']);
 
