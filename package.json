@@ -36,7 +36,9 @@
   "dependencies": {
     "browserify-fs": "^1.0.0",
     "dotenv": "^2.0.0",
+    "express": "^4.13.4",
     "fs": "0.0.2",
+    "gzippo": "^0.2.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
   },
