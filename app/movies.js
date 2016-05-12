@@ -7,8 +7,6 @@ export default class Movies extends React.Component {
   }
 
   componentDidMount() {
-    let apiKey = process.env.API_KEY;
-    console.log(apiKey);
 
     $.get("https://api.themoviedb.org/3/movie/popular?page=1&api_key=652deb670ddfdd95399f106f134d4dc6", function (movies) {
         this.setState({
