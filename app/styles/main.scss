@@ -1,0 +1,9 @@
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "variables";
+@import "header";
+@import "movies";
+
+body {
+  background-color: $background-color;
+  color: white;
+}

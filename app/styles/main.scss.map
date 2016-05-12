@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":["@import \"variables\";\n@import \"header\";\n\nbody {\n  background-color: $background-color;\n  color: white;\n}\n"],"file":"main.scss","sourceRoot":"/source/"}

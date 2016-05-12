@@ -1,0 +1,38 @@
+.header {
+  padding: 2rem;
+
+  .logo {
+    display: inline-block;
+    margin-right: 10rem;
+    color: red;
+    font-family: "Teko";
+  }
+
+  .nav {
+    display: inline-block;
+  }
+
+  .link {
+    padding: 0 5rem 0 5rem;
+    cursor: pointer;
+  }
+
+  .browse {
+    border-right: 0.1rem solid white;
+  }
+
+  .user {
+    padding-top: 2rem;
+
+    span {
+      margin: 0 3rem 0 3rem;
+      cursor: pointer;
+    }
+
+    .user-icon {
+      padding: 1.5rem;
+      border-radius: 5rem;
+      background: red;
+    }
+  }
+}

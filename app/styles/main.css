@@ -1,0 +1,123 @@
+@import url(../node_modules/font-awesome/css/font-awesome.min.css);
+.header {
+  padding: 2rem; }
+  .header .logo {
+    display: inline-block;
+    margin-right: 10rem;
+    color: red;
+    font-family: "Teko"; }
+  .header .nav {
+    display: inline-block; }
+  .header .link {
+    padding: 0 5rem 0 5rem;
+    cursor: pointer; }
+  .header .browse {
+    border-right: 0.1rem solid white; }
+  .header .user {
+    padding-top: 2rem; }
+    .header .user span {
+      margin: 0 3rem 0 3rem;
+      cursor: pointer; }
+    .header .user .user-icon {
+      padding: 1.5rem;
+      border-radius: 5rem;
+      background: red; }
+
+.movies {
+  padding: 0;
+  background: #212025; }
+
+.type {
+  font-family: "Teko";
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 10rem;
+  color: red; }
+
+.category {
+  margin-top: 8rem;
+  margin-bottom: -5rem; }
+
+.movie {
+  width: 20rem;
+  height: 30rem;
+  position: relative; }
+  .movie img {
+    opacity: 0.5;
+    max-width: 20rem;
+    max-height: 30rem;
+    transition: 0.4s; }
+    .movie img:hover {
+      opacity: 1;
+      cursor: pointer;
+      transform: scale(1.1);
+      z-index: 5; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.6);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  0% {
+    -moz-transform: scale(0.6);
+    opacity: 0; }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.fade-in.movie {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
+
+.fade-in.category {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.loading {
+  color: white; }
+
+.glyphicon-refresh-animate {
+  -animation: spin .7s infinite linear;
+  -webkit-animation: spin2 .7s infinite linear; }
+
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg); }
+  to {
+    transform: scale(1) rotate(360deg); } }
+
+body {
+  background-color: #212025;
+  color: white; }

@@ -1,0 +1,96 @@
+.movies {
+  padding: 0;
+  background: $background-color;
+}
+
+.type {
+  font-family: "Teko";
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 10rem;
+  color: red;
+}
+
+.category {
+  margin-top: 8rem;
+  margin-bottom: -5rem;
+}
+
+.movie {
+  width: 20rem;
+  height:30rem;
+  position: relative;
+
+  img {
+    opacity: 0.5;
+    max-width: 20rem;
+    max-height: 30rem;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+      transform: scale(1.1);
+      z-index: 5;
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+   0% { -webkit-transform: scale(.6); opacity: 0; }
+   100% { -webkit-transform: scale(1); opacity: 1;  }
+}
+@-moz-keyframes  fadeIn {
+   0% { -moz-transform: scale(.6); opacity: 0; }
+   100% { -moz-transform: scale(1); opacity: 1;  }
+}
+@keyframes fadeIn {
+   0% { transform: scale(.6); opacity: 0; }
+   100% { transform: scale(1); opacity: 1;  }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-in.movie {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.fade-in.category {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.loading {
+  color:white;
+}
+
+.glyphicon-refresh-animate {
+  -animation: spin .7s infinite linear;
+  -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}
