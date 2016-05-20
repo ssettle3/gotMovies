@@ -7,8 +7,10 @@ export default class Movies extends React.Component {
   }
 
   componentDidMount() {
+    var apiKey = this.props.env.apiKey;
+    var baseUrl = this.props.env.baseUrl;
 
-    $.get("https://api.themoviedb.org/3/movie/popular?page=1&api_key=652deb670ddfdd95399f106f134d4dc6", function (movies) {
+    $.get(baseUrl + "popular?page=1&api_key=" + apiKey, function (movies) {
         this.setState({
           movies: movies,
           page: 1
